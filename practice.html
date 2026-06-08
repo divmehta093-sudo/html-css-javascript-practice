@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+span {
+  color: red;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1 id="h1">hello world</h1>
+<p>This is a <span>red bold</span> word inside a paragraph.</p>
+<p>Notice how the text continues normally after the span.</p>
+<p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, eius.</p>
+
+
+<table border="1">
+  <tr><th>Name</th><th>Age</th><th>Course</th></tr>
+  <tr><td>Divya</td><td>22</td><td>BSc IT</td></tr>
+  <tr><td>Ravi</td><td>23</td><td>BSc CS</td></tr>
+</table>
+
+<span id="id1" style="display:inline-block; width:100px; height:30px; background:orange;">
+  Box 1
+</span>
+
+<span id="id" style="display:inline-block; width:100px; height:30px; background:purple;">
+  Box 2
+</span>
+
+
+<input id="task">
+<button onclick="addTask()">Add</button>
+<ul id="list"></ul>
+
+
+<script>
+function addTask(){
+  let task = document.getElementById("task").value;
+  let li = document.createElement("li");
+  li.textContent = task;
+  li.onclick = function(){ this.remove(); }
+  document.getElementById("list").appendChild(li);
+  
+}
+
+let p = document.getElementById("p1");
+p.style.color="red";
+
+let p1 = document.getElementById("p1")
+p1.onclick = () => p1.style.color = "blue";
+// h1.onclick = () => h1.style.display = "none";
+id.onclick = () => id.style.display = "none";
+document.querySelector('h1').onclick = e => e.target.style.fontSize = "100px";
+id1.onclick = () => {
+  id1.style.color= "blue"
+} 
+
+
+
+</script>
+
+
+</body>
+</html>

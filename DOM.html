@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p id="heading">Hello duniya</p>
+    <h1 class="on">Hello this is a class one</h1>
+    <h1 class="one">Hello this is a class two</h1>
+    <h1 class="one">Hello this is a class three</h1>
+    <h1 class="one">Hello this is a class four</h1>
+
+    <div></div> <br> <br>
+    
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi quis ad quasi incidunt reiciendis, necessitatibus porro labore velit perspiciatis tempore ea, non ex? Voluptatibus ut sapiente esse tenetur doloremque?
+    Reprehenderit nostrum nihil error voluptatibus, corrupti impedit soluta provident consequatur veniam quidem, iure culpa aperiam! Maxime perferendis voluptate id aliquid. Dolorum earum numquam provident laudantium natus maxime quaerat iusto accusantium!
+    Repellat, deleniti porro voluptas aut, sequi culpa iure omnis voluptate similique veniam aspernatur non enim labore expedita, voluptates et fugit tempora delectus illum. Nulla magni facere consequatur iste odio. Voluptatibus.
+    Voluptatem porro distinctio exercitationem quisquam sit non sunt, nemo fugiat provident optio, ratione harum deserunt sint vero inventore laborum. Amet corporis, provident maxime doloremque placeat laboriosam eligendi distinctio est perspiciatis?
+    Aspernatur, eos aliquid. Suscipit deleniti illo repellat ducimus est autem, laudantium perspiciatis explicabo aliquam consectetur omnis id dolorem aliquid excepturi accusantium tempora ipsum nemo architecto! Iusto doloremque hic obcaecati neque.</div> <br>
+    <button id="show" onclick="showtext()" style="background-color:lightgreen; color: white; border: none;  padding:10px 20px; border-radius: 5px;">show</button>
+    <button id="hidden" onclick="hiddentext()" style="background-color:lightgreen; color: white; border: none;  padding:10px 20px; border-radius: 5px;">hidden</button>
+    
+    <script>
+    console.log(window.document);
+    let data = document.getElementById("heading")
+    console.log(data);
+    let data2 = data.innerHTML
+    console.log(data2);
+
+    let a = document.getElementsByClassName("one")
+    console.log(a);
+    let a1 = a[0].innerHTML
+    let a2 = a[1].innerHTML
+    console.log(a1);
+    console.log(a2);
+
+    let b = document.getElementsByTagName("h1")
+    console.log(b);
+    let c = b[0].textContent
+    console.log(c);
+
+    let d = document.querySelectorAll('.one')
+    console.log(d);
+
+     
+//   Method 1 give tag to id through the DOM method
+    // Give ID
+    let e = document.getElementsByTagName("div")[0]
+    e.setAttribute("id", "pic")
+    let demo = document.getElementById("pic")
+    demo.style.width = "400px";
+    demo.style.height = "400px";
+    demo.style.borderRadius = "50%"; // Circle
+    demo.style.backgroundColor = "Red";
+    demo.style.backgroundImage = "url('https://jooinn.com/images/nature-338.jpg')";
+    demo.style.backgroundSize = "cover";
+    demo.style.backgroundPosition = "center";
+
+
+//  Method 2 give tag to id through the DOM method
+    let myDiv = document.createElement("div");  
+    demo.id = "profile";
+
+    // Apply CSS using DOM
+    myDiv.style.width = "500px";
+    myDiv.style.height = "500px";
+    myDiv.style.borderRadius = "50%"; // Circle
+    myDiv.style.backgroundColor = "Red";
+    myDiv.style.backgroundImage = "url('https://i.pinimg.com/originals/dc/cc/6a/dccc6a689bf667942c1bbc085f38b38c.jpg')";
+    myDiv.style.backgroundSize = "cover";
+    myDiv.style.backgroundPosition = "center";
+
+    // Add div to body
+    document.body.appendChild(myDiv);
+
+
+
+
+    // using event onclick div tag visible and show
+    let s = document.getElementsByTagName("div")[1]
+    s.style.color = "green"
+    s.style.border = "black solid 4px"
+    s.style.backgroundColor = "aqua"
+
+    function showtext(){
+        s.style.visibility = "visible";
+    }
+
+    function hiddentext(){
+        s.style.visibility = "hidden";
+    }
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

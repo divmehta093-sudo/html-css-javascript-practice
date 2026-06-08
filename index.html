@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculation Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        form {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <script>
+        function calculate() {
+            var n1 = parseFloat(document.getElementById("num1").value);
+            var n2 = parseFloat(document.getElementById("num2").value);
+            var op = document.getElementById("operation").value;
+            var result;
+
+            if (isNaN(n1) || isNaN(n2)) {
+                document.getElementById("result").value = "Enter numbers";
+                return;
+            }
+
+            if (op == "add") {
+                result = n1 + n2;
+            } else if (op == "sub") {
+                result = n1 - n2;
+            } else if (op == "mul") {
+                result = n1 * n2;
+            } else if (op == "div") {
+                result = n1 / n2;
+            } else if(op == "sqare"){
+                var c1 = n1 * n1;
+                var c2 = n2 * n2;
+                result = "square of n1 =" + c1 + ", square of n2 = " + c2;
+            } else if (op == "cube") {
+                var c1 = n1 * n1 * n1;
+                var c2 = n2 * n2 * n2;
+                result = "Cube of n1 = " + c1 + " , Cube of n2 = " + c2;
+            }  
+            
+
+            document.getElementById("result").value = result;
+        }
+    </script>
+</head>
+
+<body>
+
+<form>
+    <h2>Calculation Form</h2>
+
+    <label>Enter First Number:</label>
+    <input type="number" id="num1">
+
+    <label>Enter Second Number:</label>
+    <input type="number" id="num2">
+
+    <label>select operation</label>
+    <select id="operation">
+        <option value="add">addition(+)</option>
+        <option value="sub">Subtraction(-)</option>
+        <option value="mul">Multiplication(*)</option>
+        <option value="div">Division(/)</option>
+        <option value="sqare">square</option>
+        <option value="cube">cube</option>
+    </select>
+
+
+    <label>Result:</label>
+    <input type="text" id="result" readonly>
+
+    <input type="button" value="Calculate" onclick="calculate()">
+</form>
+
+</body>
+</html>

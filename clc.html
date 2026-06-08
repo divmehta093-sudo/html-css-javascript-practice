@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// Take inputs
+let n1 = Number(prompt("Enter first number:"));
+let n2 = Number(prompt("Enter second number:"));
+
+// Ask user what operation they want
+let choice = prompt("What do you want to do? (add / sub / mul / div)").toLowerCase();
+
+let result;
+
+// Perform operation based on user's choice
+if (choice === "add") {
+    result = n1 + n2;
+} 
+else if (choice === "sub") {
+    result = n1 - n2;
+}
+else if (choice === "mul") {
+    result = n1 * n2;
+}
+else if (choice === "div") {
+    if (n2 === 0) {
+        result = "Cannot divide by ZERO!";
+    } else {
+        result = n1 / n2;
+    }
+}
+else {
+    result = "Invalid choice! Please enter add / sub / mul / div";
+}
+
+// Show result
+alert("Result: " + result);
+console.log("Result:", result);
+</script>
+
+    
+</body>
+</html>

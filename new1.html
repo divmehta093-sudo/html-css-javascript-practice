@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        button {
+            padding: 8px 20px;
+            margin: 5px;
+            background-color: rgb(62, 136, 201);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease; /* smooth hover effect */
+        }
+
+        /* Hover Effect */
+        button:hover {
+            background-color: rgb(27, 92, 153);
+             transform: scale(1.05); /*thoda zoom effect*/
+        }
+</style>
+<body>
+    <form style="border: solid black; background-color: bisque; height: 200px; width: 400px;">
+    <h1>calculation of page</h1>
+    <label>Enter a number</label>
+    <input type="number" id="num"  placeholder="enetr a number"> <br> <br>
+
+    <label for="result">result</label>
+    <input type="text" id="result" readonly> <br> <br>
+
+    <button type="button" onclick="square()">square</button>
+    <button type="button" onclick="cube()">cube</button>
+    <button type="button" onclick="addition()">add</button>
+    <button type="button" onclick="Multiplication()">multiply</button>
+    </form>
+
+    <script>
+        function square(){
+           let a=Number(document.getElementById("num").value);
+           let ans=a*a;
+           document.getElementById("result").value=ans;
+        }
+        function cube(){
+            let b=Number(document.getElementById("num").value);
+            let ans=b*b*b;
+            document.getElementById("result").value=ans;
+        }
+         function addition(){
+            let c=Number(document.getElementById("num").value);
+            let ans=c+c;
+            document.getElementById("result").value=ans;
+        }
+         function Multiplication(){
+            let d=Number(document.getElementById("num").value);
+            let ans=d*d;
+            document.getElementById("result").value=ans;
+        }
+           
+        
+    </script>
+
+</body>
+</html>
+
